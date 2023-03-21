@@ -74,18 +74,22 @@ export const livePools: SerializedPoolConfig[] = [
     isFinished: false,
   },
   {
-    sousId: 2,
+    sousId: 4,
     stakingToken: serializedTokens.rice,
     earningToken: serializedTokens.wbnb,
     contractAddress: {
-      32520: '0xEA7cfA5515a31063d4d7130828510e8a876ebe1A',
+      32520: '0x26Cb922d88D5C63bF4035886EcC166394D183CCD',
       56: '',
       97: '',
     },
     poolCategory: PoolCategory.CORE,
-    tokenPerBlock: '100',
+    tokenPerBlock: '5479',
     isFinished: false,
   },
+]
+
+// known finished pools
+const finishedPools = [
   {
     sousId: 3,
     stakingToken: serializedTokens.rice,
@@ -97,51 +101,21 @@ export const livePools: SerializedPoolConfig[] = [
     },
     poolCategory: PoolCategory.CORE,
     tokenPerBlock: '3000',
-    isFinished: false,
+    isFinished: true,
   },
-  // {
-  // 	sousId: 3,
-  // 	stakingToken: serializedTokens.xRice,
-  // 	earningToken: serializedTokens.rice,
-  // 	contractAddress: {
-  // 		32520: '0xDa492E9c88E93dcF18c17f441a1938A746Bf9448',
-  // 		56: '',
-  // 		97: '',
-  // 	},
-  // 	poolCategory: PoolCategory.CORE,
-  // 	tokenPerBlock: '0.06',
-  // 	isFinished: false,
-  // },
-  // {
-  // 	sousId: 4,
-  // 	stakingToken: serializedTokens.xRice,
-  // 	earningToken: serializedTokens.wbnb,
-  //   contractAddress: {
-  // 		32520: '0xd2E9aE5178E9eeba6857a20Aef93C767B087c6eD',
-  // 		56: '',
-  // 		97: '',
-  // 	},
-  // 	poolCategory: PoolCategory.CORE,
-  // 	tokenPerBlock: '100',
-  // 	isFinished: false,
-  // },
-]
-
-// known finished pools
-const finishedPools = [
-  /* {
-    sousId: 285,
+  {
+    sousId: 2,
     stakingToken: serializedTokens.rice,
-    earningToken: serializedTokens.sdao,
+    earningToken: serializedTokens.wbnb,
     contractAddress: {
-      32520: '',
-      56: '0x168eF2e470bfeAEB32BE52FB218A41483904851c',
+      32520: '0xEA7cfA5515a31063d4d7130828510e8a876ebe1A',
+      56: '',
       97: '',
     },
     poolCategory: PoolCategory.CORE,
-    tokenPerBlock: '0.405',
-    version: 3,
-  }, */
+    tokenPerBlock: '100',
+    isFinished: true,
+  },
 ].map((p) => ({ ...p, isFinished: true }))
 
 export default [...livePools, ...finishedPools]

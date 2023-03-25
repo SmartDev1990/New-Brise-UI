@@ -86,6 +86,19 @@ export const livePools: SerializedPoolConfig[] = [
     tokenPerBlock: '5479',
     isFinished: false,
   },
+  {
+    sousId: 5,
+    stakingToken: serializedTokens.xRice,
+    earningToken: serializedTokens.wbnb,
+    contractAddress: {
+      32520: '0xE21620F1432F6D4305f69fD8A25e8CcDF47554f7',
+      56: '',
+      97: '',
+    },
+    poolCategory: PoolCategory.CORE,
+    tokenPerBlock: '1447',
+    isFinished: false,
+  },
 ]
 
 // known finished pools

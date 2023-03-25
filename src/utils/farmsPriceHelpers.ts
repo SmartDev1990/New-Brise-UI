@@ -8,7 +8,7 @@ import { SerializedFarm } from 'state/types'
  */
 export const filterFarmsByQuoteToken = (
   farms: SerializedFarm[],
-  preferredQuoteTokens: string[] = ['Rice Token', 'WBRISE'],
+  preferredQuoteTokens: string[] = ['Rice', 'WBRISE'],
 ): SerializedFarm => {
   const preferredFarm = farms.find((farm) => {
     return preferredQuoteTokens.some((quoteToken) => {
